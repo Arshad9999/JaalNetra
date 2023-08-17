@@ -12,27 +12,77 @@ button{
     font-family: 'Montserrat', sans-serif;
 }
 
-
-.heroSection {
+.headerSection {
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url('https://www.mediafire.com/convkey/5ca5/92xvlb22qvvpoub6g.jpg') center;
+    
+     /* To hide any overflowing video content */
+}
+/* .navBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("https://pe-images.s3.amazonaws.com/basics/cc/gradients/essentials/gradient-reversed.jpg");
     background-size: cover;
+    z-index: -20;
+    /* Add any styling for your navigation bar here 
+  } */
+video {
+    /* object-fit: cover; */
+    width: 150%;
+    height: 100vh;
+    position: absolute;
+    filter: contrast(.4);
+    top: 0;
+    left: 0;
+    /* filter: opacity(70%); */
+    transform: translateX(0%) translateY(0%);
+    z-index: -10; /* To position the video behind other content */
+    
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+/* .heroSection :hover{
+    /* background-color: #fff;
+    filter: opacity(60%); }*/
 
 .heroText{
     text-align: center;
     color: #fff;
     margin-top: 0px;
+    max-width: 100%; /* Adjust the width as per your preference */
+  margin: 0 auto; /* To center the content horizontally */
+  line-height: 1.6;
+  
+  /* background-color: #f7fafc; */
 }
+
 
 .heroText h1{
     font-size: 3em;
     margin: 0;
+    padding-bottom: 2;
+}
+.heroText h2{
+    font-size: 2em;
+    margin: 0;
+}
+.heroText p{
+    font-size: 1.5em;
+    margin: 0;
+}
+.heroText :hover{
+    color: #000;
+    
 }
 
 .heroText button{
@@ -44,6 +94,7 @@ button{
     margin: 5px;
     font-weight: bold;
     display: inline-block;
+    
 }
 
 .heroText button:hover{

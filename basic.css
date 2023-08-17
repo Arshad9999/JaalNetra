@@ -1,0 +1,91 @@
+body {
+  background-color: white;
+  z-index: -11;
+  color: #718096;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.navBar {
+  /* position: fixed; Changed 'absolute' to 'fixed' for a more appropriate navigation bar behavior */
+  top: 0;
+  left: 0;
+  right: 0;
+  /* background-image: url("https://pe-images.s3.amazonaws.com/basics/cc/gradients/essentials/gradient-reversed.jpg"); */
+  /* background-size: cover; Ensures the background image covers the entire navigation bar */
+  /* Adjusted z-index to a positive value so the navigation bar stays above other elements */
+  /* Add any additional styling for your navigation bar here */
+  /* For example, you can set the height, padding, text styles, etc. */
+  /* height: 60px;
+    padding: 10px; */
+  /* color: white;
+    font-size: 16px;
+    text-align: center; */
+}
+
+body .bodyHeading {
+  color: #1a202c;
+
+}
+
+.dark-mode {
+  background-color: rgb(38, 38, 38);
+  color: rgb(189, 189, 189);
+
+}
+
+.dark-mode .navButton:hover {
+  background-color: #4a5568;
+  /* text-gray-700*/
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  border-radius: 0.25rem;
+  /* You can adjust the padding values as needed */
+  outline: none;
+
+  /* You can adjust the border radius as needed */
+
+  /* You can adjust the font size as needed */
+
+  /* You can adjust the margin values as needed */
+
+
+}
+
+.dark-mode .bodyHeading {
+  color: #f7fafc;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  /* Position the footer at the bottom */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.dark-mode .card:hover {
+  background-color: #4a5568;
+  /* text-gray-700*/
+  
+  
+  /* You can adjust the padding values as needed */
+  
+}
+
+.dark-mode .card {
+  background-color: rgb(38, 38, 38);
+  color: rgb(189, 189, 189);
+  
+}
+
+.dark-mode .cardText {
+  
+  color: rgb(189, 189, 189);
+  
+}

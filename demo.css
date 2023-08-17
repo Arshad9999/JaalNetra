@@ -1,0 +1,113 @@
+.nav-menu {
+  display: inline-flex;
+  items-align: center;
+  background-color: #3B82F6;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* styles.css */
+
+/* Add shared styles for the buttons */
+.button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+}
+
+/* Styles for the navigation menu */
+.nav-menu {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+/* Additional styles based on the 'md' breakpoint */
+@media (min-width: 768px) {
+  .nav-menu {
+    margin-left: auto;
+  }
+}
+.demo-footer {
+  background-color: #1a202c;
+  color: #cbd5e0;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #fff;
+}
+
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #fff;
+  padding: 0.5rem;
+  background-color: #38a169;
+  border-radius: 50%;
+}
+
+.logo-text {
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+}
+
+.footer-link {
+  color: #a0aec0;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #718096;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+video {
+  /* object-fit: cover; */
+  
+  width: 100%;
+  margin-bottom: 1rem;
+  
+ 
+}
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin-right: 0.5rem;
+}
+.demoScreenButton{display: flex; justify-content: center; align-items: center; height: 6vh;
+
+
+}

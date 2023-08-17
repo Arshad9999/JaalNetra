@@ -1,144 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>responsiveWebsite</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>level1project</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="documentation.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="basic.css">
+  <style>
+    .accordion {
+
+      cursor: pointer;
+      display: flex;
+
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+      font-size: 1.5rem;
+    }
+
+    .contactHeading {
+
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+      font-size: 1.5rem;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+      color: #fff;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+
+      overflow: hidden;
+    }
+  </style>
 </head>
+
 <body>
-    
-    <!--Nav Bar-->
-  <header class="text-gray-400 bg-gray-900 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
-          viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">XYZ</span>
+  <!-- <script src="documentation.js"></script> -->
+  <!--Nav Bar-->
+  <header>
+    <div class="top-0 container left-0 mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center mb-4 md:mb-0">
+        <img src="components/jaalnetralogo.jpg" fill="none" class="w-20 h-20 rounded-full" alt="">
+        <span class="bodyHeading font-bold ml-3 text-xl">HashItOut</span>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href="home.html" class="mx-1">
+      <div class="md:ml-auto flex font-bold flex-wrap items-center text-base justify-center">
+        <a href="home.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Home</button>
+            class="bodyHeading inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Home</button>
         </a>
 
-        <a href="demo.html" class="mx-1">
+        <a href="demo.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Demo</button>
+            class="bodyHeading inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Demo</button>
         </a>
 
-        <a href="download.html" class="mx-1">
+        <a href="download.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Download</button>
+            class="bodyHeading inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Download</button>
         </a>
 
-        <a href="documentation.html" class="mx-1">
+        <a href="documentation.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Documentation</button>
+            class="bodyHeading inline-flex font-bold items-center border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Documentation</button>
         </a>
 
-        <a href="help.html" class="mx-1">
+        <a href="ContactUs.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Help</button>
+            class="bodyHeading inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Contact
+            Us</button>
         </a>
-
-      </nav>
+        <label>
+          <input type="checkbox" class="slider" onclick="myFunction()">
+          <div class="switch">
+            <div class="suns"></div>
+            <div class="moons">
+              <div class="star star-1"></div>
+              <div class="star star-2"></div>
+              <div class="star star-3"></div>
+              <div class="star star-4"></div>
+              <div class="star star-5"></div>
+              <div class="first-moon"></div>
+            </div>
+            <div class="sand"></div>
+            <div class="bb8">
+              <div class="antennas">
+                <div class="antenna short"></div>
+                <div class="antenna long"></div>
+              </div>
+              <div class="head">
+                <div class="stripe one"></div>
+                <div class="stripe two"></div>
+                <div class="eyes">
+                  <div class="eye one"></div>
+                  <div class="eye two"></div>
+                </div>
+                <div class="stripe detail">
+                  <div class="detail zero"></div>
+                  <div class="detail zero"></div>
+                  <div class="detail one"></div>
+                  <div class="detail two"></div>
+                  <div class="detail three"></div>
+                  <div class="detail four"></div>
+                  <div class="detail five"></div>
+                  <div class="detail five"></div>
+                </div>
+                <div class="stripe three"></div>
+              </div>
+              <div class="ball">
+                <div class="lines one"></div>
+                <div class="lines two"></div>
+                <div class="ring one"></div>
+                <div class="ring two"></div>
+                <div class="ring three"></div>
+              </div>
+              <div class="shadow"></div>
+            </div>
+          </div>
+        </label>
+        <script>
+          function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+          }
+        </script>
+      </div>
     </div>
   </header>
+  <!--Screen-->
 
-    <!--Documentation Section-->
-    <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="-my-8 divide-y-2 divide-gray-800">
-            <div class="py-8 flex flex-wrap md:flex-nowrap">
-              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                <span class="font-semibold title-font text-white">CATEGORY</span>
-                <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-              </div>
-              <div class="md:flex-grow">
-                <h2 class="text-2xl font-medium text-white title-font mb-2">Bitters hashtag waistcoat fashion axe chia unicorn</h2>
-                <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                <a class="text-green-400 inline-flex items-center mt-4">Learn More
-                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
+  <!--Documentation Section-->
+  <p
+    class="bodyHeading contactHeading justify-content: align-items: center; sm:text-3xl text-2xl font-bold font-medium title-font">
+    Frequently Asked Questions (FAQs)</p>
+  <div class="px-12">
+    <button class="accordion bodyHeading">Complexity of the Problem</button>
+    <div class="panel">
+      <p>Applications for mesh networking can send signals over a range of frequency bands, including unauthorised ones.
+        Due to the possibility that these signals may not adhere to the typical cellular network frequencies, it may be
+        challenging to detect and distinguish them.<br><br>
+
+        Signals are influenced by a variety of environmental elements, including buildings, trees, and other obstacles,
+        in
+        the continuously changing RF environment. As a result, it could be difficult to precisely detect and locate Mesh
+        Networking app signals.<br><br>
+
+        To protect the confidentiality and security of user data, Mesh Networking apps can employ a variety of
+        encryption
+        and security mechanisms. It may be difficult to recognise and decode these signals as a result.<br><br>
+
+        To protect the confidentiality and security of user data, Mesh Networking apps can employ a variety of
+        encryption
+        and security mechanisms. It may be difficult to recognise and decode these signals as a result.<br><br>
+
+        The fact that Mesh Networking apps are intended to function in locations without cell coverage makes it more
+        difficult to identify their signals. This calls for the portable RF scanner to be capable of picking up signals
+        even in places where cellular network coverage is not present.
+      </p>
+    </div>
+  </div>
+  <div class="px-12"><button class="bodyHeading accordion">Feasibility</button>
+    <div class="panel">
+      <p>Meeting the demands of government agencies, law enforcement, and security firms interested in monitoring Mesh
+        Networking activity in specific areas.<br><br>
+
+        The potential benefits outweigh the costs and risks.<br><br>
+
+        This system will detect Mesh Networking apps using a man-portable device that can scan an area corresponding to
+        a
+        relatable TSP-BTS.</p>
+    </div>
+  </div>
+
+  <div class="px-12">
+    <button class="bodyHeading accordion">Scalability</button>
+    <div class="panel">
+      <p>As the number of users and devices using Mesh Networking technology continues to grow, the demand for a
+        scalable
+        detection system will also increase.<br><br>
+        The detection system will be designed with modular and scalable architecture that allows for easy expansion and
+        integration with other security and monitoring systems.<br><br>
+        Using advanced machine learning algorithms and big data analytics tools, The detection system should be able to
+        collect and analyze data from multiple sources, including Wi-Fi and Bluetooth signals, and provide real-time
+        alerts and notifications to security personnel.</p>
+    </div>
+  </div>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+  <!--Technology used-->
+  <p
+    class="bodyHeading contactHeading justify-content: item-center; sm:text-3xl text-2xl font-bold font-medium title-font mb-2 ">
+    Mesh Network App Detection</p>
+
+  <div class="md:w-3/3 md:pr-12 px-12 mb-10">
+    <h1 class="sm:text-3xl text-2xl font-bold font-medium title-font mb-2 " style="font-size: 2em;">Key features</h1>
+    <div>
+      <p class="leading-relaxed text-base md:pr-12 mb-10 text-justify">Design and develop a technological solution for
+        detecting apps
+        like Fire chat that use Mesh Networking to connect users without cell service in a given area. The solution
+        should be man-portable and should be able to scan an area corresponding to a relatable
+        TSP-BTS(Telecommunications Service Provider-Base Transceiver Station).</p>
+
+    </div>
+  </div>
+  </div>
+
+  <section>
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div
+          class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="bodyHeading text-xl title-font font-medium mb-2">Atheros chipset Wi-Fi modem</h2>
+          <p class="leading-relaxed text-base text-justify">An Atheros chipset Wi-Fi modem is a network adapter that
+            utilizes Atheros communication chips to enable wireless connectivity. Atheros chipsets are well-regarded for
+            their reliability and performance, making these modems suitable for various devices like laptops, desktops,
+            routers, and other Wi-Fi enabled devices.</p>
+          <a href="https://www.qualcomm.com/products/technology/wi-fi" target="_blank"
+            class="mt-3 text-green-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="bodyHeading text-xl title-font font-medium mb-2">Raspberry Pi</h2>
+          <p class="leading-relaxed text-base text-justify">Raspberry Pi is a popular, credit card-sized single-board
+            computer developed to promote computer science education and DIY projects. It offers various models with
+            different capabilities, running on Linux-based operating systems. With its GPIO pins and diverse add-ons,
+            Raspberry Pi is widely used for home automation, robotics, media centers, and more.</p>
+          <a href="https://www.raspberrypi.org/" target="_blank"
+            class="mt-3 text-green-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div
+          class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="bodyHeading text-xl title-font font-medium mb-2">Wifite</h2>
+          <p class="leading-relaxed text-base text-justify">Wifite is a powerful and automated wireless network auditing
+            tool used for testing and securing Wi-Fi networks. It combines various attack techniques to crack WEP, WPA,
+            and WPA2 passwords, making it a valuable asset for network security professionals.</p>
+          <a href="https://www.kali.org/tools/wifite/" target="_blank"
+            class="mt-3 text-green-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="bodyHeading text-xl title-font font-medium mb-2">Wireshark</h2>
+          <p class="leading-relaxed text-base text-justify">Wireshark is a widely-used network protocol analyzer that
+            captures and examines data packets on a network. It allows users to analyze and troubleshoot network issues,
+            inspect traffic for security threats, and gain valuable insights into network communication.</p>
+          <a href="https://www.wireshark.org/" target="_blank"
+            class="mt-3 text-green-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+        <div
+          class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="bodyHeading text-xl title-font font-medium mb-2">HashCat</h2>
+          <p class="leading-relaxed text-base text-justify">HashCat is a renowned password cracking tool designed to
+            recover lost or forgotten passwords through brute-force, dictionary, and hybrid attacks. It supports a vast
+            range of algorithms and can efficiently crack hashes from various applications and operating systems, aiding
+            security audits and penetration testing.</p>
+          <a href="https://hashcat.net/hashcat/" target="_blank"
+            class="mt-3 text-green-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+  <section>
+    <div class="relative mx-auto ">
+      <div class="grid gap-12 mx-auto mt-12 lg:grid-cols-5 px-4 lg:max-w-none">
+        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
+          <a href="https://youtu.be/0lqRZ3MWPXY">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48 rounded-lg"
+                src="https://1.bp.blogspot.com/-9PANS7pDTMU/XxBSZ1ZNEJI/AAAAAAAADEA/jIB7v4LG_yU8XwBts7Wp1tZ_fOd-rS67wCLcBGAsYHQ/w1200-h630-p-k-no-nu/PicsArt_07-16-06.21.19.webp"
+                alt="">
             </div>
-            <div class="py-8 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap">
-              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                <span class="font-semibold title-font text-white">CATEGORY</span>
-                <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-              </div>
-              <div class="md:flex-grow">
-                <h2 class="text-2xl font-medium text-white title-font mb-2">Meditation bushwick direct trade taxidermy shaman</h2>
-                <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                <a class="text-green-400 inline-flex items-center mt-4">Learn More
-                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="py-8 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap">
-              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                <span class="font-semibold title-font text-white">CATEGORY</span>
-                <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-              </div>
-              <div class="md:flex-grow">
-                <h2 class="text-2xl font-medium text-white title-font mb-2">Woke master cleanse drinking vinegar salvia</h2>
-                <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                <a class="text-green-400 inline-flex items-center mt-4">Learn More
-                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
+          </a>
+          <div class="flex flex-col justify-between flex-1">
+            <div class="flex-1">
+
+              <a href="#" class="block mt-2 space-y-6">
+                <h3 class="bodyHeading font-semibold leading-none tracking-tighter">Atheros chipset Wi-Fi modem</h3>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    <!--Footer-->
-    <footer class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">XYZ</span>
+
+        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
+          <a href="https://youtu.be/eZ74x6dVYes">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48 rounded-lg"
+                src="https://m.media-amazon.com/images/I/41cDz-BqefL._AC_UF1000,1000_QL80_.jpg" alt="">
+            </div>
           </a>
-          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 XYZ —
-            <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">HashItOut</a>
-          </p>
-          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a class="text-gray-400">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-400">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-400">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-400">
-              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
-          </span>
+          <div class="flex flex-col justify-between flex-1">
+
+            <div class="flex-1">
+
+              <a href="#" class="block mt-2 space-y-6">
+                <h3 class="bodyHeading font-semibold leading-none tracking-tighter">Raspberry Pi</h3>
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
+
+        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
+          <a href="https://youtu.be/TDVM-BUChpY">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48 rounded-lg"
+                src="https://media.licdn.com/dms/image/C4E0DAQEKzuxJOFSiTA/learning-public-crop_288_512/0/1571074402342?e=2147483647&v=beta&t=J-OvOmn46Pmdrb5Kib73iTK_NN3FfUL3mU8WWr_pxcM"
+                alt="">
+            </div>
+          </a>
+          <div class="flex flex-col justify-between flex-1">
+
+            <div class="flex-1">
+
+              <a href="#" class="block mt-2 space-y-6">
+                <h3 class="bodyHeading font-semibold leading-none tracking-tighter">Wifite</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
+          <a href="https://youtu.be/Lb-PJl9u3z8">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48 rounded-lg"
+                src="data:image/jpeg;base64,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"
+                alt="">
+            </div>
+          </a>
+          <div class="flex flex-col justify-between flex-1">
+
+            <div class="flex-1">
+
+              <a href="#" class="block mt-2 space-y-6">
+                <h3 class="bodyHeading font-semibold leading-none tracking-tighter">Wireshark</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
+          <a href="https://youtu.be/z4_oqTZJqCo">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48 rounded-lg"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAilBMVEX///8AAACxsbG1tbV9fX2zs7Otra24uLisrKz8/Pzv7++9vb309PTQ0NDo6Ojk5ORMTEyVlZUzMzPCwsLd3d2Ojo6enp5hYWF2dnbU1NRDQ0MgICAUFBQuLi45OTmmpqZmZmaGhoYcHBxXV1djY2NOTk6SkpJ4eHgeHh4nJycMDAwXFxdubm4wMDBdDCQ0AAAIw0lEQVR4nO2da3ujLBCGUwhgNMdqTqaNtenhbZv9/3/vVSPWAwqJtjC9uL/s1jXpPAvCzDDgaGSxWCwWi8VisVgsFovFYrFYLBYNBD7Bs7luK36KxWZ5l/POprqtGZxg/XhX4cnXbdKQLDYfdwJ2M92GyZgcXpC8t81XQnkZn2/yZ3KKXg6TIcy9hYfEyFev69cvorBV3oX7VdDx+Yn3mtzzNbThysy7e9s+bm+9Mh/rvfgLZrvLDe7PSZDg7nlvG9dFTv13JXWcd6/e32dj/uWBNoWTiESfhY1PZJH317kXy/qmiPDN51ICvCsuPyS/RdtzuKfYqXTEj+VyebxB3DePyTfcVy5QTFs68W8wo5j0UyQjxJhqnVRmDmHbHxT4xIijsQVTgkTi+scErhOBXZPJr7BwEIu+fkTfc8SQY4Cb7iL0Mw/jkWBEjPDQJx4l7DS4wBMjtNNf+k3S8eY8sMCdRxyDPPMgacWx3OoriBmiC92yyiQPI4sHFLhmCOnzRoVM8ZASE4HYlEewYMIQu87ZbifposaMMWU85L0MIvDMkKEpDg+xR7n9Uo7GCkwkks0ACiNzBY4mmL32FrhlTLeODqaofyNGCtktjQS475N4xNqDiW68p54Kz55uCRIWcU+FChlUzUQ9FRLdAqTs5SI60ZyzUGD+Xy+BB8P8bQGTW1Kl34Qm+qM1+qXetrrNVyDupXCt23wFcC+FWLf5Csx6KTQoNdPKos9QExqVm2nBLZaNnlV91Ocio7wz2uvOmRRezddScYV0WcyhkW7rlfB5052D8L5FVJl/IeHJ1qO5sW+ZPU9IbUf+MZQ14yE8zka8Y48Nj5xy3KKbJj7cLgy7nsbHMHxKBhf+o2O+z5ZRLGKkfW62PS6Pz+LmS/5lm92TXziZnL8oM+OpjFP2434chmFT4/0yDMeXSIIndzbmBxYXXMIL2PKBY4pPYW397Xl5PPPyCz+/tiRAOulo5BX5qGJ682ozx/G9mNtdfm0DYyRNWWD+JP4rrrnVieN74pvz6f6EITg0OZgWT1vRitX0RnHZLy5RCF43JyBxo7Wq9Qz5xOd+L6zGBMZkmIPLy95rf+7OawUbyzSW35cWq8xOdTeZUyYLMaqja8io8WnEKj6SSqwKRBAiwwr4mmKpLSOQhpkLU0rYTq4t450RCiEwrOFSxFYPCvoeNgxRMN5MmbRYCi2lAl+Tu0yru1BlwpC0rO9zzQhiANLALfiUYNS13nZGmFA47qiAgCbNSM/itYzDGSUNSEG5Mk2mHiWE4SiuZ2zu4wgzQmijgh0eAUKEEK8+OW49QhBCwBvwwmSPkomjPqgukymC7OEOMTUWM6/RS70ZoHBQhYZC3QYNTt27edBt0OA05grdBg3NpKHwzwwyOW5DIVBXtJV5QyGwkF7KoqHwj80VgkIiKBl8VbyGQtMr9K4FNRQi3SYNTLOgD8aCtjrNUP9Nt0kD00y77XSbNDDN3CmECrZraObclrpNGpjmKvdBt0kD0xD414KLqUDh3wouAoHCP5GEKhCVZIJbTutEVFb7txzTlUDhRrdRgyLaBh3rNmpQRNv1pU4NiVdwwmRRDeZj90ec7Cbnd+zrTTPTltLxgXnx4AJJ5zQzbSlt2bYJLu1EBfK0ird7iaf8oBponX/Z1BsR7zIRFUHt60EIkDlFNB2KjHebK+JARlPxwSeNKL+5Tfo5AuLbiQ/oqcXAk8ZO9893DKUYTCiwNl24h7q+HWEESPV+c9HiQtn6SU3gfYwxQSYdwtNF23a2svlVv267YYk+CqYuuu2ghVJSmJQuf4xRpg9Q0XDbuTUlf6XUPd8SeYk+BqX9UtrOOguLO5xv1WnzJc8fjBEmR+x3pxTJqOL/IErrwDC0Opvm6iiHBw6FZ77CiHpAwokS7XufeaqGry6GjHqgumdO3KqQ703nfusYigtTo71o/5TfwQfbN5gC23y2lPwOHhICXTUV5bs5+ZzHYw+g1cJOh8L8NBrehkA7adepmO+XW3g6FWgavOvAmnx/Il/lB5KyqNEWOl24zH68UuNJq6W30qykKXPpl8U2S8223kb34bTj7J4i2wgpnijoFJiXCs+55w0liV+mazZMydzsKW/oV93m3oDsIEWnehdAv1u2ee3imvr8HQvw/DZREUaVbFfQnie74W1SkJ+Lla1euEXeH9xoKt8L/JLdV5wKCq1ksT1F802Wk5nxEFGyMmwcTEFh1k3nRYktsG6q8kKBy2habN+HNZqKV7frZHPgnkdQJ9mXGoXauclZzFQ+XQoQKtvx7+6es3s9PprCWa0onz3TTZaeCfjEAun8CNWzP7LF4Gmc/wThgM8c9SOFs47JM1aAStzVzzbJ/Bq+jhrKvtcYZJFhvRHn/y5/h1Pifs1LBNKeOeGBPpSltevOok336vH/EigK1c4u5aSJU/6GEyAKr30Z22o04lEwDIXt675tLLibDmSn/vWvuXjkeUcYiYz4aoHJeJr/CSK4UHVIhYx1W6+ASu6iHQghcL+XBwBYJu1ebZLxYn58KE8Cd7Ixv2Co3+ssl+YHwESuoovI+HqMnn30LjK+k/Z9/7Hx8W+vuT7D9F76KZcg4VO3hG6GeP/hSreILvoOMxdMPkkxHkShwQnTYZrQ5EYc6jXyxq4D9wuayuhW0kZPf62EqQfQy899VsXQ0ii1BV81zBxr+r1SroqZxcKqZ8yrYGY2SuX9XKqYGWEMKNDM+aK7nvtaTBxq+r4mt4qJCbd+766sY+LZn8MqNDEtPGwvNVHhNYUJckysUBzSaTNzLBWcS3I7LybW7E/RdbUJXRzMfHUQdepnd9zKh0N1ixHiE7ZTK7fs5mHHiJlpYdchDK/O/d4efzyvMDb2zJbAQQRjxtBms1q9xfH4KuL1ahMln07PbDHRZ8uYE5q+UyaReSPphxElJi8/BT6iFPWAIt/Eyb6Cu9jPfN/3PHZd+zHP92eBoQ+gxWKxWCwWi8VisVgsFovFIuV/J9NwBZh+BYkAAAAASUVORK5CYII="
+                alt="">
+              </img>
+          </a>
+          <div class="flex flex-col justify-between flex-1">
+
+            <div class="flex-1">
+
+              <a href="#" class="block mt-2 space-y-6">
+                <h3 class="bodyHeading font-semibold leading-none tracking-tighter">HashCat</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="relative absolute inset-x-0 bottom-0 h-8 ">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center">
+        <img src="components/jaalnetralogo.jpg" fill="none" class="w-20 h-20 rounded-full" alt="">
+        <span class="bodyHeading font-bold ml-3 text-xl">HashItOut</span>
+      </a>
+      <p class="bodyHeading text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 KAVACH
+        —
+        <a href="" class="bodyHeading ml-1" target="_blank" rel="noopener noreferrer">JaalNetra</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a>
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-3">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 ">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
 </body>
+
 </html>

@@ -2,63 +2,129 @@
 <html lang="en">
 
 <head>
-  <title>responsiveWebsite</title>
-  <link rel="stylesheet" href="home.css">
+  <title>level1project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="home.js"></script>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="basic.css">
 </head>
 
 <body>
-
+  <script src="home.js"></script>
   <!--Nav Bar-->
-  <header class="text-gray-400 bg-gray-900 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+  <header class="headerSection ">
+    <video autoplay loop muted>
+      <source src="components/networkingloopedvideo.mp4" type="video/mp4">
+      <!-- Include other video formats if needed for cross-browser compatibility -->
+    </video>
+
+    <div class="navBar fixed top-0 left-0 container z-index: 11; mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center mb-4 md:mb-0">
+        <!-- <svg xmlns="components/nobgjaalnetralogo.png" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 bg-green-500  text-white rounded-full"
           viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">XYZ</span>
+        </svg> -->
+        <img src="components/jaalnetralogo.jpg"  fill="none" class="w-20 h-20 rounded-full" alt="">
+        <span class="text-gray-100 font-bold ml-3 text-xl">HashItOut</span>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href="home.html" class="mx-1">
+      <div class="md:ml-auto flex flex-wrap font-bold items-center text-base justify-center">
+        <a href="home.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Home</button>
+            class="text-gray-100 inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Home</button>
         </a>
 
-        <a href="demo.html" class="mx-1">
+        <a href="demo.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Demo</button>
+            class="text-gray-100 inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Demo</button>
         </a>
 
-        <a href="download.html" class="mx-1">
+        <a href="download.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Download</button>
+            class="text-gray-100 inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Download</button>
         </a>
 
-        <a href="documentation.html" class="mx-1">
+        <a href="documentation.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Documentation</button>
+            class="text-gray-100 inline-flex font-bold items-center border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Documentation</button>
         </a>
 
-        <a href="help.html" class="mx-1">
+        <a href="ContactUs.html" class="navButton mx-1">
           <button
-            class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Help</button>
+            class="text-gray-100 inline-flex font-bold items-center  border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0">Contact Us</button>
         </a>
+        <label>
+          <input type="checkbox" class="slider" onclick="myFunction()">
+          <div class="switch">
+            <div class="suns"></div>
+            <div class="moons">
+              <div class="star star-1"></div>
+              <div class="star star-2"></div>
+              <div class="star star-3"></div>
+              <div class="star star-4"></div>
+              <div class="star star-5"></div>
+              <div class="first-moon"></div>
+            </div>
+            <div class="sand"></div>
+            <div class="bb8">
+              <div class="antennas">
+                <div class="antenna short"></div>
+                <div class="antenna long"></div>
+              </div>
+              <div class="head">
+                <div class="stripe one"></div>
+                <div class="stripe two"></div>
+                <div class="eyes">
+                  <div class="eye one"></div>
+                  <div class="eye two"></div>
+                </div>
+                <div class="stripe detail">
+                  <div class="detail zero"></div>
+                  <div class="detail zero"></div>
+                  <div class="detail one"></div>
+                  <div class="detail two"></div>
+                  <div class="detail three"></div>
+                  <div class="detail four"></div>
+                  <div class="detail five"></div>
+                  <div class="detail five"></div>
+                </div>
+                <div class="stripe three"></div>
+              </div>
+              <div class="ball">
+                <div class="lines one"></div>
+                <div class="lines two"></div>
+                <div class="ring one"></div>
+                <div class="ring two"></div>
+                <div class="ring three"></div>
+              </div>
+              <div class="shadow"></div>
+            </div>
+          </div>
+        </label>
+        <script>
+          function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+          }
+        </script>
+      </div>
+    </div>
 
-      </nav>
+    <!--Screen-->
+
+    <!--Hero Section-->
+    <div class="heroSection ">
+      <div class="heroText rounded ">
+        <h1>Mesh Network App Detection</h1>
+        <h2></h2>
+        <p></p>
+        <a href="demo.html"><button class="joinNow">Demo</button></a>
+        <a href="https://kavach.mic.gov.in/" target="_blank"><button>Kavach Official Website</button></a>
+      </div>
     </div>
   </header>
-
-  <!--Hero Section-->
-  <div class="heroSection">
-    <div class="heroText">
-      <h1>You can do it!</h1>
-      <p>Push yourself, no one else is going to do it for you.</p>
-      <button class="joinNow">Join now</button>
-      <button>Know more</button>
-    </div>
-  </div>
   <!--<section class="text-gray-400 bg-gray-900 body-font">
         <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
           <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/1200x800">
@@ -72,40 +138,137 @@
           </div>
         </div>
       </section>-->
+
+
+  <section class=" body-font">
+    <div class="flex space-x-10 flex-wrap items-center justify-center">
+      <!-- Blue -->
+      <div class="card md:w-4/5 w-fit cursor-default rounded-2xl bg-transparent py-10 transition-all duration-500 ease-in-out ">
+        
+        <p class="bodyHeading sm:text-3xl text-2xl font-bold font-medium title-font mb-2 ">Problem Statement- KVH-015</p>
+        <p class="mt-2.5 font-normal tracking-[0.2px] text-justify">Design and develop a technological solution for detecting apps like fire
+          chat that uses Mesh Networking to connect users without cell in a given area. The solution should be
+          man-portable and should be able to scan an area corresponding to a relatable TSP-BTS(Telecommunications
+          Service Provider-Base Transceiver Station).</p>
+      </div>
+      </div>
+    <div class="container flex flex-wrap px-5 mx-auto items-center">
+      <!-- <div class="md:w-1/2 md:pr-12 md:py-8   mb-10 md:mb-0 pb-10 ">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 "></h1>
+        <p class="leading-relaxed text-base"></p>
+        <a class="text-green-500 inline-flex items-center mt-4">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div> -->
+      <div class="md:w-2/3 md:pr-12 mb-10">
+        <h1 class="bodyHeading sm:text-3xl text-2xl font-bold font-medium title-font mb-2 ">About JaalNetr</h1>
+        
+      </div>
+      <div class="md:w-1/3 md:pr-12 mb-10">
+        <h1 class="bodyHeading sm:text-3xl text-2xl font-bold font-medium title-font mb-2 " style="font-size: 2em;">Key features</h1>
+        
+      </div>
+    </div>
+    <div class="container  flex flex-wrap px-5 mx-auto ">
+      <div class="md:w-2/3 md:pr-12  mb-10">
+        <p class="leading-relaxed text-base text-justify">Introducing Jaalnetra, a cutting-edge system designed to detect and analyze
+          WiFi and Bluetooth mesh networks in real-time. With advanced signal processing, topology mapping, and traffic
+          analysis, Jaalnetra provides a clear overview of network structure and performance metrics. Its robust
+          security features include intrusion detection, encryption analysis, and anomaly alerts, ensuring optimal
+          network efficiency and safeguarding against potential threats. Seamlessly integrating with existing tools,
+          Jaalnetra empowers administrators to harness the full potential of mesh networks while maintaining a secure
+          wireless communication environment.</p>
+
+      </div>
+      <div class="md:w-1/3 md:pr-12 mb-10">
+        <ul>
+          <li style="list-style-type: disc;">The system maintains its anonymity during offensive maneuvers</li>
+          <li style="list-style-type: disc;">It exhibits optimized energy utilization and cost effectiveness</li>
+          <li style="list-style-type: disc;">the system boats remote operability and portability
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    
+    <!-- <div class="md:w-1/2 md:pr-12 md:py-8  mb-10 md:mb-0 pb-10 ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">About JaalNetr</h1>
+            <p class="leading-relaxed text-base">Introducing Jaalnetra, a cutting-edge system designed to detect and analyze WiFi and Bluetooth mesh networks in real-time. With advanced signal processing, topology mapping, and traffic analysis, Jaalnetra provides a clear overview of network structure and performance metrics. Its robust security features include intrusion detection, encryption analysis, and anomaly alerts, ensuring optimal network efficiency and safeguarding against potential threats. Seamlessly integrating with existing tools, Jaalnetra empowers administrators to harness the full potential of mesh networks while maintaining a secure wireless communication environment.</p>
+            <a class="text-green-500 inline-flex items-center mt-4">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div> -->
+  </section>
+
+
+
+
   <!--Download Link-->
-  <section class="text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-        <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">Download Link</h1>
-        <a href="download.html"><button
-            class="flex-shrink-0 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0">Download</button></a>
+
+
+  <section>
+    <!-- <div
+      class="container body-font px-5 py-24 mx-auto lg:w-2/3 flex flex-wrap flex-col sm:flex-row sm:items-center items-start mx-auto margin-left: 10px; margin-top: 10px; justify-items: justify-center;">
+      <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font">Download & Documentation Link</h1>
+      <a href="download.html">
+        <button
+          class="flex-shrink-0 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0">Download</button>
+      </a>&nbsp;
+      
+      <a href="documentation.html">
+        <button
+          class="flex-shrink-0 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0">Documentation</button>
+      </a>
+    </div> -->
+    <div class="flex space-x-10 flex-wrap items-center justify-center">
+      <!-- Blue -->
+      <div class="card md:w-1/3 w-fit cursor-default rounded-2xl bg-white px-9 py-10 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-slate-900/20">
+        
+        <p class="cardText mt-5 text-2xl font-bold text-black">Download Link</p>
+        <p class="mt-2.5 w-52 text-sm font-normal leading-4 tracking-[0.2px] text-black"></p>
+        <a href="download.html" class="navButton mx-1"><button class="cardText mt-6 rounded-full border-2 border-black px-8 py-2.5 text-sm font-semibold text-black transition-all duration-300 hover:bg-black hover:text-white hover:shadow-lg hover:shadow-black/30">Click Here</button></a>
+      </div>
+     
+      <!-- Black -->
+      <div class="card md:w-1/3 w-fit cursor-default rounded-2xl bg-white px-9 py-10 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-slate-900/20">
+        
+        <p class="cardText mt-5 text-2xl font-bold text-black ">Documentation Link</p>
+        <p class="mt-2.5 w-52 text-sm font-normal leading-4 tracking-[0.2px] text-black"></p>
+        <a href="download.html" class="navButton mx-1"><button class="cardText mt-6 rounded-full border-2 border-black px-8 py-2.5 text-sm font-semibold text-black transition-all duration-300 hover:bg-black hover:text-white hover:shadow-lg hover:shadow-black/30">Click Here</button></a>
       </div>
     </div>
   </section>
   <!--Footer-->
-  <footer class="text-gray-400 bg-gray-900 body-font">
+  <footer class="relative absolute inset-x-0 bottom-0 h-8 ">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+      <a class="flex title-font font-medium items-center md:justify-start justify-center">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 bg-green-500  text-white rounded-full"
           viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">XYZ</span>
+        </svg> -->
+        <img src="components/jaalnetralogo.jpg"  fill="none" class="w-20 h-20 rounded-full" alt="">
+        <span class="bodyHeading font-bold ml-3 text-xl">HashItOut</span>
       </a>
-      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 XYZ
+      <p class="bodyHeading text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 KAVACH
         —
-        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank"
-          rel="noopener noreferrer">HashItOut</a>
+        <a href="" class="bodyHeading ml-1" target="_blank" rel="noopener noreferrer">JaalNetra</a>
       </p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-        <a class="text-gray-400">
+        <a>
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
             viewBox="0 0 24 24">
             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-400">
+        <a class="ml-3">
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
             viewBox="0 0 24 24">
             <path
@@ -113,14 +276,14 @@
             </path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-400">
+        <a class="ml-3">
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             class="w-5 h-5" viewBox="0 0 24 24">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-400">
+        <a class="ml-3 ">
           <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
             class="w-5 h-5" viewBox="0 0 24 24">
             <path stroke="none"
