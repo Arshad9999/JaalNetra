@@ -10,7 +10,7 @@ No package installation is required. From the repository root:
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/home.html`. The default entry page is `home.html`, rather than `index.html`.
+Open `http://localhost:8000/home.html`. The root `index.html` redirects to `home.html`; both entry URLs work.
 
 ## Structure
 
@@ -34,8 +34,16 @@ flowchart LR
 
 ## Known limitations
 
-Some pages reference files that are not checked in, including `home.js` and `documentation.css`. The current tree has no packet-capture service. The old README pointed to another account’s Pages site; that site responding does not prove it deploys this repository. This project has multiple contributors; preserve their credit.
+References to absent scripts/styles have been removed. The demo displays project screenshots, and the download page states that no APK is available. The current tree has no packet-capture service. The old README pointed to another account’s Pages site; that site responding does not prove it deploys this repository. This project has multiple contributors; preserve their credit.
 
 ## License
 
 No repository-wide license was detected. No new license has been assigned; the owner must choose appropriate terms and verify rights to included material.
+
+## Checks
+
+```sh
+python3 -m unittest discover -s tests -v
+```
+
+The checks cover local links/assets, non-empty media/script sources, and the root entry page. They do not validate external sites or a packet-capture service.
