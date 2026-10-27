@@ -47,3 +47,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 The checks cover local links/assets, non-empty media/script sources, and the root entry page. They do not validate external sites or a packet-capture service.
+
+## Published site
+
+[Static project website](https://arshad9999.github.io/JaalNetra/). The Pages deployment succeeded and the homepage returned HTTP 200 on 27 October 2026. This does not establish a working capture service or validate model results.
